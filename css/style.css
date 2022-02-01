@@ -267,6 +267,7 @@ body {
   height: 30px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .xros-btn{
   display: flex;
