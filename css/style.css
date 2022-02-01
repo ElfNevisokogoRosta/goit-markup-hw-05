@@ -260,14 +260,14 @@ body {
   height: 100%;
   background-color:rgba(0, 0, 0, 0.2);
   z-index: 1;
-  animation-name: rotateOutDownRight;
-  animation-duration: 2500ms;
-  /*animation-timing-function: var(--cubic-animation);*/
+  /*animation-name: rotateOutDownRight;
+  animation-duration: 250ms;
+  animation-timing-function: var(--cubic-animation);*/
 }
-.backdrop.is-hidden{
+.backdrop.was-hidden{
   animation-name:rotateIn;
   animation-duration: 250ms;
-  animation-timing-function: var(--cubic-animation);
+  /*animation-timing-function: var(--cubic-animation);*/
 }
 .modal{
   position: absolute;
@@ -296,7 +296,7 @@ body {
   height: 11px;
   width: 11px;
 }
-.is-hidden{
+.was-hidden{
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
