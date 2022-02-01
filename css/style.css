@@ -34,6 +34,19 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--primary-text-color);
 }
+/* animation*/
+@keyframes rotateOutDownRight{
+  0%{opacity:1}
+  to{opacity:0;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+  }
+}
+@keyframes rotateIn {
+  0%{opacity:0;-webkit-transform:rotate(-200deg);
+    transform:rotate(-200deg)}
+    to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}
+  }
 
 /*common  style*/
 .container{
@@ -107,6 +120,7 @@ body {
 }
 .nav-link{
   font-weight: 500;
+  padding: 32px 0px;
   font-size: 14px;
   line-height: calc(16/14);
   text-decoration: none;
@@ -246,6 +260,14 @@ body {
   height: 100%;
   background-color:rgba(0, 0, 0, 0.2);
   z-index: 1;
+  animation-name: rotateOutDownRight;
+  animation-duration: 2500ms;
+  /*animation-timing-function: var(--cubic-animation);*/
+}
+.backdrop.is-hidden{
+  animation-name:rotateIn;
+  animation-duration: 250ms;
+  animation-timing-function: var(--cubic-animation);
 }
 .modal{
   position: absolute;
@@ -580,6 +602,7 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--background-color);
 }
-.portofolio-element:hover .portofolio-discription{
+.portofolio-element:hover .portofolio-discription,
+.portofolio-element:focus .portofolio-discription{
   transform: translateY(0%);
 }
