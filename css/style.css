@@ -34,20 +34,6 @@ body {
   font-family: Roboto, sans-serif;
   color: var(--primary-text-color);
 }
-/* animation*/
-@keyframes rotateOutDownRight{
-  0%{opacity:1}
-  to{opacity:0;
-    -webkit-transform:rotate(-45deg);
-    transform:rotate(-45deg)
-  }
-}
-@keyframes rotateIn {
-  0%{opacity:0;-webkit-transform:rotate(-200deg);
-    transform:rotate(-200deg)}
-    to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}
-  }
-
 /*common  style*/
 .container{
   width: 1200px;
@@ -250,24 +236,23 @@ body {
 }
 /* hero*/
 .backdrop{
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color:rgba(0, 0, 0, 0.2);
   z-index: 1;
-  /*animation-name: rotateOutDownRight;
-  animation-duration: 250ms;
-  animation-timing-function: var(--cubic-animation);*/
+  transition: opacity 250ms var(--cubic-animation), 
+  visibility 250ms var(--cubic-animation) ;
 }
 .backdrop.was-hidden{
-  animation-name:rotateIn;
-  animation-duration: 250ms;
-  /*animation-timing-function: var(--cubic-animation);*/
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 .modal{
   position: absolute;
@@ -296,11 +281,7 @@ body {
   height: 11px;
   width: 11px;
 }
-.was-hidden{
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
+
 .hero{
   text-align: center;
   padding-top: 200px;

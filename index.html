@@ -47,15 +47,6 @@
   <main>
     <!--hero section-->
     <section class="hero">
-      <div class="backdrop" data-modal>
-        <div class="modal" >
-          <button class="modal-close-btn flex-box" type="button" data-modal-close>
-            <svg class="xros-btn">
-              <use href="./img/index/icons.svg#xros"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
       <div class="container"> 
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <button type="button" class="hero-button button" data-modal-open>Заказать услугу</button>
@@ -412,6 +403,16 @@
         </div>
       </div>
   </footer>
+  <!--Modal window-->
+  <div class="backdrop was-hidden" data-modal>
+    <div class="modal" data-modal>
+      <button class="modal-close-btn flex-box" type="button" data-modal-close>
+        <svg class="xros-btn">
+          <use href="./img/index/icons.svg#xros"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
   <script src="./script/modal.js"></script>
 </body>
 </html>
