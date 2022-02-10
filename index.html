@@ -401,11 +401,65 @@
             </li>
           </ul>
         </div>
+        <div class="follow">
+          <h2 class="follow-title section-title" >Подпишитесь на рассылку</h2>
+          <form class="follow-from">
+            <label class="follow-email">
+              <input type="email" placeholder="E-mail">
+            </label>
+            <button class="follow-btn button" type="submit">Подписаться
+              <svg class="follow-btn-icon">
+                <use href="./img/index/icons.svg#follow"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
   </footer>
   <!--Modal window-->
   <div class="backdrop was-hidden" data-modal>
     <div class="modal" data-modal>
+      <div class="form">
+        <form>
+          <b class="form__title">Оставьте свои данные, мы вам перезвоним</b>
+          <label class="form__field">
+            <svg class="form__field__icon">
+              <use href="./img/index/icons.svg#modalicon"></use>
+            </svg>
+            <input class="form__field--blue" type="text" name="name" placeholder=" ">
+            <span class="form__field__label">Имя</span>
+          </label>
+          <label class="form__field">
+            <svg class="form__field__icon">
+              <use href="./img/index/icons.svg#modalphone"></use>
+            </svg>
+            <input class="form__field--blue" type="tel" name="tel" placeholder=" ">
+            <span class="form__field__label">Телефон</span> 
+          </label>
+          <label class="form__field">
+            <svg class="form__field__icon">
+              <use href="./img/index/icons.svg#modalmail"></use>
+            </svg>
+            <input class="form__field--blue" type="email" name="email">
+            <span class="form__field__label">Почта</span>
+          </label>
+          <label class="form__comment">
+            <span class="form__field__label">Комментарий</span>
+            <textarea class="form__field__commentarea" name="comment" placeholder="Введите текст"></textarea>
+          </label>
+          <label class="form__field__license">
+            
+            <input class="visually-hidden" type="checkbox" name="license">
+            <span class="form__field__checkbox flex-box">
+            </span>
+            <p class="form__field__coordination">Соглашаюсь с рассылкой и принимаю <a class="license-terms" href="">Условия договора</a></p>
+          </label>
+          <button class="submit-button button" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+      
       <button class="modal-close-btn flex-box" type="button" data-modal-close>
         <svg class="xros-btn">
           <use href="./img/index/icons.svg#xros"></use>
